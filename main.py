@@ -61,7 +61,6 @@ def respond(voice_data):
     if 'exit' in voice_data:
         exit()
 
-
 time.sleep(1)
 alexa_speak('¿Cómo te puedo ayudar?')
 while 1:
