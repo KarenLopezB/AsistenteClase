@@ -58,6 +58,15 @@ def respond(voice_data):
         url = 'https://www.youtube.mx/' + video 
         webbrowser.get().open(url)
         alexa_speak('Esto es lo que encontre para: ' + video )
+    if 'clima' in voice_data:
+        clima = record_audio()
+        url = 'https://www.google.com/search?q=clima' + clima
+        webbrowser.get().open(url)
+    if 'noticias' in voice_data:
+        noticias = record_audio()
+        url = 'https://news.google.com/' + noticias
+        webbrowser.get().open(url)
+        alexa_speak('Estas son las noticias de hoy: ' + noticias )
     if 'exit' in voice_data:
         exit()
 
